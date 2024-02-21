@@ -75,6 +75,7 @@ export default function Chat() {
     );
     try {
       const querySnapshot = await getDocs(q);
+      console.log(querySnapshot);
       querySnapshot.forEach((doc) => {
         setUser(doc.data());
       });

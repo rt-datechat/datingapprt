@@ -4,8 +4,6 @@ import Login from './assets/components/Login'
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
   redirect,
 } from "react-router-dom";
 import Register from './assets/components/Register';
@@ -16,17 +14,15 @@ import Testing from './assets/components/Testing';
 
 function App() {
 
-  const {currentUser} = useContext(AuthContext)
+  const { currentUser } = useContext(AuthContext)
 
   console.log(currentUser, `dari app.jsx`)
-
-
   const router = createBrowserRouter([
     {
       path: "/register",
       element: <Register />,
       loader: () => {
-        if(localStorage.getItem("email")) {
+        if (localStorage.getItem("email")) {
           return redirect('/')
         }
         return null;
