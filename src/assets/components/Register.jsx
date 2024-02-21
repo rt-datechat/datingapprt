@@ -6,11 +6,10 @@ import {
 import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaImages } from "react-icons/fa6";
-import { useState } from "react";
 import Swal from "sweetalert2";
-import { FirebaseError } from "firebase/app";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -50,7 +49,6 @@ export default function Register() {
       localStorage.setItem("email", email);
       navigate("/");
     } catch (error) {
-      // console.log(error.message.split(": ")[1])
       Swal.fire({
         icon: "error",
         title: error.message.split(": ")[1],
@@ -60,7 +58,6 @@ export default function Register() {
 
   return (
     <>
-      {/* component */}
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -281,28 +278,6 @@ export default function Register() {
             </form>
           </div>
         </div>
-
-        {/* <div className="flex justify-center items-center mt-6">
-            <a
-              href="#"
-              target="_blank"
-              className="
-      inline-flex
-      items-center
-      text-gray-700
-      font-medium
-      text-xs text-center
-    "
-            >
-              <span className="ml-2">You have an account?</span>
-            </a>
-            <Link
-              to="/login"
-              className="text-xs ml-2 text-blue-500 font-semibold"
-            >
-              Login here
-            </Link>
-          </div> */}
       </div>
     </>
   );

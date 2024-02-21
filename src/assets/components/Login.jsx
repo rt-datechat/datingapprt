@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import Swal from "sweetalert2";
 
@@ -24,7 +24,6 @@ export default function Login() {
   };
   return (
     <>
-      {/* component */}
       <link
         rel="stylesheet"
         href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"
@@ -36,7 +35,6 @@ export default function Login() {
           </div>
           <button
             className="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200"
-            //   onClick={handleGoogleLogin}
           >
             <span className="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-blue-500">
               <i className="fab fa-google"></i>
@@ -161,6 +159,5 @@ export default function Login() {
         </div>
       </div>
     </>
-    // <h1>masuk banh</h1>
   );
 }
