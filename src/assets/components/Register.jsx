@@ -70,7 +70,15 @@ export default function Register() {
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
         crossOrigin="anonymous"
       />
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div
+        className="min-h-screen flex flex-col items-center justify-center bg-gray-100"
+        style={{
+          backgroundImage: 'url("/src/assets/bground.png")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div
           className="
     flex flex-col
@@ -86,8 +94,8 @@ export default function Register() {
     max-w-md
   "
         >
-          <div className="font-medium self-center text-xl sm:text-3xl text-gray-800">
-            Join us Now
+          <div className="font-bold self-center text-xl sm:text-3xl text-gray-800">
+            Join us Now!
           </div>
           <div className="mt-4 self-center text-xl sm:text-sm text-gray-800">
             Enter your credentials to create account!
@@ -115,7 +123,7 @@ export default function Register() {
               text-gray-400
             "
                   >
-                    <i className="fas fa-user text-blue-500" />
+                    <i className="fas fa-user text-[#81b0df]" />
                   </div>
                   <input
                     id="name"
@@ -157,7 +165,7 @@ export default function Register() {
               text-gray-400
             "
                   >
-                    <i className="fas fa-at text-blue-500" />
+                    <i className="fas fa-at text-[#81b0df]" />
                   </div>
                   <input
                     id="email"
@@ -200,7 +208,7 @@ export default function Register() {
             "
                   >
                     <span>
-                      <i className="fas fa-lock text-blue-500" />
+                      <i className="fas fa-lock text-[#81b0df]" />
                     </span>
                   </div>
                   <input
@@ -212,7 +220,7 @@ export default function Register() {
               placeholder-gray-500
               pl-10
               pr-4
-              rounded-2xl
+              rounded-3xl
               border border-gray-400
               w-full
               py-2
@@ -241,7 +249,7 @@ export default function Register() {
                   </label>
                 </div>
               </div>
-              <div className="flex w-full ">
+              <div className="flex w-full mt-3">
                 <button
                   type="submit"
                   className="
@@ -252,14 +260,9 @@ export default function Register() {
             focus:outline-none
             text-white text-sm
             sm:text-base
-            bg-blue-500
-            hover:bg-blue-600
-            rounded-2xl
-            py-2
-            w-full
-            transition
-            duration-150
-            ease-in
+            bg-[#9ab7d4]
+            hover:bg-[#81b0df]
+            rounded py-2 w-full transition duration-150 ease-in
           "
                 >
                   <span className="mr-2 uppercase">Sign Up</span>
@@ -281,28 +284,6 @@ export default function Register() {
             </form>
           </div>
         </div>
-
-        {/* <div className="flex justify-center items-center mt-6">
-            <a
-              href="#"
-              target="_blank"
-              className="
-      inline-flex
-      items-center
-      text-gray-700
-      font-medium
-      text-xs text-center
-    "
-            >
-              <span className="ml-2">You have an account?</span>
-            </a>
-            <Link
-              to="/login"
-              className="text-xs ml-2 text-blue-500 font-semibold"
-            >
-              Login here
-            </Link>
-          </div> */}
       </div>
     </>
   );

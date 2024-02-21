@@ -195,11 +195,11 @@ export default function Chat() {
     <>
       {/* profile sampai search */}
       {/* component */}
-      <div className="flex h-screen bg-fuchsia-100 antialiased text-gray-800">
+      <div className="flex h-screen bg-pink-100 antialiased text-gray-800">
         <div className="flex flex-row h-full w-full overflow-x-hidden">
-          <div className="flex flex-col gap-3 py-8 pl-6 pr-2 w-64 bg-fuchsia-200 flex-shrink-0">
+          <div className="flex flex-col gap-3 py-8 pl-6 pr-2 w-64 bg-pink-200 flex-shrink-0">
             <div className="flex flex-row items-center justify-center h-12 w-full">
-              <div className="flex items-center justify-center rounded-2xl text-fuchsia-700 bg-fuchsia-100 h-10 w-10">
+              <div className="flex items-center justify-center rounded-2xl text-pink-700 bg-pink-100 h-10 w-10">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -217,7 +217,7 @@ export default function Chat() {
               </div>
               <div className="ml-2 font-bold text-2xl">QuickChat</div>
             </div>
-            <div className="flex flex-col items-center bg-fuchsia-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div className="flex flex-col items-center bg-pink-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
               <div className="h-20 w-20 rounded-full border overflow-hidden">
                 <img
                   src={currentUser && currentUser.photoURL}
@@ -230,7 +230,7 @@ export default function Chat() {
               </div>
               <div className="flex flex-row items-center mt-3">
                 <button
-                  className="middle none center rounded-lg bg-fuchsia-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-fuchsia-500/20 transition-all hover:shadow-lg hover:shadow-fuchsia-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  className="middle none center rounded-lg bg-pink-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   data-ripple-light="true"
                   onClick={() => {
                     signOut(auth);
@@ -250,7 +250,7 @@ export default function Chat() {
               <form action="" onSubmit={submitHandler}>
                 <div className="pt-2 relative mx-auto text-gray-600">
                   <input
-                    className="border-2 border-fuchsia-300 bg-fuchsia h-10 px-5 pr-10 rounded-lg text-sm focus:outline-none"
+                    className="border-2 border-pink-300 bg-pink h-10 px-5 pr-10 rounded-lg text-sm focus:outline-none"
                     type="search"
                     name="search"
                     placeholder="Search"
@@ -260,7 +260,7 @@ export default function Chat() {
                     className="absolute right-0 top-0 mt-5 mr-4"
                   >
                     <svg
-                      className="text-fuchsia-600 h-4 w-4 fill-current"
+                      className="text-pink-600 h-4 w-4 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                       version="1.1"
@@ -318,11 +318,11 @@ export default function Chat() {
                       }
                       onClick={() => chatSelect(chat[1].userInfo)}
                     >
-                      <div className="flex items-center justify-center h-8 w-8 bg-fuchsia-300 rounded-full">
+                      <div className="flex items-center justify-center h-8 w-8 bg-pink-300 rounded-full">
                         <img
                           src={chat[1].userInfo.photoURL}
                           alt="profpic"
-                          className="flex items-center justify-center h-8 w-8 bg-fuchsia-300 rounded-full"
+                          className="flex items-center justify-center h-8 w-8 bg-pink-300 rounded-full"
                         />
                       </div>
                       <div className="ml-2 text-sm font-semibold">
@@ -334,7 +334,7 @@ export default function Chat() {
             </div>
           </div>
           <div className="flex flex-col flex-auto h-full p-6">
-            <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-fuchsia-100 h-full p-4">
+            <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-pink-100 h-full p-4">
               <div
                 ref={ref}
                 className="flex flex-col h-full overflow-x-auto mb-4"
@@ -429,7 +429,7 @@ export default function Chat() {
                       <div className="relative w-full">
                         <input
                           type="text"
-                          className="flex w-full border rounded-xl focus:outline-none focus:border-fuchsia-300 pl-4 h-10"
+                          className="flex w-full border rounded-xl focus:outline-none focus:border-pink-300 pl-4 h-10"
                           value={newMessage}
                           onChange={(e) => setNewMessage(e.target.value)}
                         />
@@ -447,7 +447,7 @@ export default function Chat() {
                   </div>
                   <div className="ml-4">
                     <button
-                      className="flex items-center justify-center bg-fuchsia-400 hover:bg-fuchsia-500 rounded-xl text-white px-4 py-1 flex-shrink-0"
+                      className="flex items-center justify-center bg-pink-400 hover:bg-pink-500 rounded-xl text-white px-4 py-1 flex-shrink-0"
                       onClick={handleSend}
                     >
                       <span>Send</span>
