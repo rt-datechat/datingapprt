@@ -18,13 +18,12 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import { ChatContext } from "../../context/ChatContext";
-import { v4 as uuid } from "uuid";
-import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { PiGifBold } from "react-icons/pi";
 import { AiOutlinePicture } from "react-icons/ai";
 import { TiDelete } from "react-icons/ti";
-import { LiaRocketchat } from "react-icons/lia";
 import Swal from "sweetalert2";
+import { v4 as uuid } from "uuid";
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
 export default function Chat() {
   const imageInputRef = useRef(null);
@@ -41,9 +40,7 @@ export default function Chat() {
   const [numberChat, setNumberChat] = useState(0);
 
   const chatSelect = (user) => {
-    // console.log(`diclick chatSelect`)
     dispatch({ type: "CHANGE_USER", payload: user });
-    // console.log(user, `===ini user===`)
     setSelectChat(user);
   };
 
@@ -194,7 +191,6 @@ export default function Chat() {
 
   return (
     <>
-      {/* component */}
       <div className="flex h-screen antialiased text-gray-800">
         <div className="flex flex-row h-full w-full overflow-x-hidden">
           <div className="flex flex-col gap-3 py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
@@ -228,7 +224,6 @@ export default function Chat() {
               <div className="text-sm font-semibold mt-2">
                 {currentUser && currentUser.displayName}
               </div>
-              {/* <div className="text-xs text-gray-500">Lead UI/UX Designer</div> */}
               <div className="flex flex-row items-center mt-3">
                 <button
                   className="middle none center rounded-lg bg-red-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -248,8 +243,6 @@ export default function Chat() {
               <div className="flex flex-row items-center justify-between text-xs">
                 <span className="font-bold">Search for User</span>
               </div>
-              {/* component */}
-              {/* This is an example component */}
               <form action="" onSubmit={submitHandler}>
                 <div className="pt-2 relative mx-auto text-gray-600">
                   <input
@@ -305,9 +298,6 @@ export default function Chat() {
             </div>
             <div className="flex flex-row items-center justify-between text-xs">
               <span className="font-bold">Active Conversations</span>
-              {/* <span className="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">
-                {numberChat}
-              </span> */}
             </div>
             <div className="flex flex-col space-y-1 mt-4 -mx-2 h-52 overflow-y-auto">
               {chats && Object.entries(chats)?.map((chat) => {
