@@ -23,7 +23,6 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { PiGifBold } from "react-icons/pi";
 import { AiOutlinePicture } from "react-icons/ai";
 import { TiDelete } from "react-icons/ti";
-import { LiaRocketchat } from "react-icons/lia";
 import Swal from "sweetalert2";
 
 export default function Chat() {
@@ -38,7 +37,6 @@ export default function Chat() {
   const [newMessage, setNewMessage] = useState("");
   const [img, setImg] = useState(null);
   const [selectChat, setSelectChat] = useState();
-  const [numberChat, setNumberChat] = useState(0);
 
   const chatSelect = (user) => {
     console.log(`diclick chatSelect`);
@@ -91,7 +89,6 @@ export default function Chat() {
       currentUser.uid > user.uid
         ? currentUser.uid + user.uid
         : user.uid + currentUser.uid;
-    // console.log(combinedId, `===ini combinedId===`);
     try {
       const res = await getDoc(doc(db, "chats", combinedId));
 
@@ -193,8 +190,6 @@ export default function Chat() {
 
   return (
     <>
-      {/* profile sampai search */}
-      {/* component */}
       <div className="flex h-screen bg-pink-100 antialiased text-gray-800">
         <div className="flex flex-row h-full w-full overflow-x-hidden">
           <div className="flex flex-col gap-3 py-8 pl-6 pr-2 w-64 bg-pink-200 flex-shrink-0">
@@ -302,8 +297,6 @@ export default function Chat() {
             </div>
             <div className="flex flex-row items-center justify-between text-xs">
               <span className="font-bold">Active Conversations</span>
-
-              {/* end component */}
             </div>
             <div className="flex flex-col space-y-1 mt-4 -mx-2 h-52 overflow-y-auto">
               {chats &&
