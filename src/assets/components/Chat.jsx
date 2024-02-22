@@ -24,6 +24,7 @@ import { TiDelete } from "react-icons/ti";
 import Swal from "sweetalert2";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+// import ReactGiphySearchbox from 'react-giphy-searchbox'
 
 export default function Chat() {
   const imageInputRef = useRef(null);
@@ -55,7 +56,6 @@ export default function Chat() {
         setChats(doc.data());
       });
     }
-
     return () => {
       currentUser && unsub();
     };
