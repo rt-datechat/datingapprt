@@ -24,7 +24,6 @@ export default function Login() {
   };
   return (
     <>
-      {/* component */}
       <link
         rel="stylesheet"
         href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"
@@ -154,6 +153,5 @@ export default function Login() {
         </div>
       </div>
     </>
-    // <h1>masuk banh</h1>
   );
 }

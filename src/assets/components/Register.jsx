@@ -50,7 +50,6 @@ export default function Register() {
       localStorage.setItem("email", email);
       navigate("/");
     } catch (error) {
-      // console.log(error.message.split(": ")[1])
       Swal.fire({
         icon: "error",
         title: error.message.split(": ")[1],
@@ -60,7 +59,6 @@ export default function Register() {
 
   return (
     <>
-      {/* component */}
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
